@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playtest Lens: live demo</title>
+<meta name="description" content="Three real playtests of a Godot level, analyzed by Meta's Muse Spark: where players got confused, stuck or surprised, with the clip and their own words.">
+<style>
+  :root { --bg:#f7f6f3; --fg:#1d1d1f; --muted:#5d5d63; --card:#fff; --line:#e3e1dc; --accent:#3557d6; --tint:#e9eefc; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141416; --fg:#ececef; --muted:#a3a3ab; --card:#1d1d21; --line:#2e2e34; --accent:#8fa6ff; --tint:#232a44; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:48px 24px 64px; }
+  h1 { font-size:2.2rem; margin:0 0 8px; letter-spacing:-0.01em; }
+  .lead { font-size:1.15rem; color:var(--muted); margin:0 0 32px; max-width:40em; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; }
+  .card h2 { font-size:1.15rem; margin:0 0 4px; }
+  .card p { margin:0 0 16px; color:var(--muted); }
+  .links { display:flex; flex-wrap:wrap; gap:8px; }
+  .links a { display:inline-block; padding:8px 14px; border-radius:8px; text-decoration:none; font-weight:600; border:1px solid var(--line); color:var(--fg); }
+  .links a.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  @media (prefers-color-scheme: dark) { .links a.primary { color:#111; } }
+  .links a:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  .tag { display:inline-block; font-size:.8rem; font-weight:600; background:var(--tint); color:var(--accent); border-radius:999px; padding:2px 10px; margin-left:6px; vertical-align:middle; }
+  .note { margin-top:32px; color:var(--muted); font-size:.95rem; }
+  .note a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Playtest Lens</h1>
+  <p class="lead">Watching a playtest takes as long as the playtest. Playtest Lens watches it for you: Meta's Muse Spark finds where the player was confused, stuck or surprised, proves each moment with its clip, the player's words and the game's event log, and puts it all on one page with the level's map.</p>
+
+  <div class="cards">
+    <section class="card">
+      <h2>Player 1 <span class="tag">21 minutes</span></h2>
+      <p>A first-time player in the Lobby level. She kept coming back to the Archive's code lock.</p>
+      <div class="links">
+        <a class="primary" href="lobby-player-1.html">Open the report</a>
+        <a href="lobby-player-1-open.html">Same session, open-weights model</a>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Player 2 <span class="tag">held out</span></h2>
+      <p>A second first-time player, 6 minutes. Nothing was tuned on this session; the developer compared it with his blind notes.</p>
+      <div class="links">
+        <a class="primary" href="lobby-player-2.html">Open the report</a>
+      </div>
+    </section>
+  </div>
+
+  <p class="note">Each report has two modes: Read, a page to scroll, and Watch, which opens from any moment. The clips carry the players' voices. Normal mode runs on Muse Spark 1.2 and Muse Voice Transcribe through the Meta Model API; the open-weights pages run on Muse Spark Open on Baseten.</p>
+  <p class="note">Code, the Godot add-on and how it works: <a href="https://github.com/Naryadchikov/playtest-lens">github.com/Naryadchikov/playtest-lens</a>. The test level is the COGITO demo by Phazorknight (MIT), prior work. Built for the Meta Global AI Developer Hackathon, 2026.</p>
+</main>
+</body>
+</html>
